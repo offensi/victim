@@ -1,0 +1,9 @@
+stages:
+  - service1
+
+job:
+  stage: service1
+  services:
+    - gcr.io/gcp-bugbounty/victim
+  script: echo "OK"
+
