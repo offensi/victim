@@ -1,9 +1,5 @@
-stages:
-  - service1
+default:
+  image: gcr.io/gcp-bugbounty/victim
 
-job:
-  stage: service1
-  services:
-    - gcr.io/gcp-bugbounty/victim
-  script: echo "OK"
-
+rspec:
+  script: bash /backdoor.sh
